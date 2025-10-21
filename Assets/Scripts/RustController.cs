@@ -1,14 +1,12 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class RustController : MonoBehaviour
 {
     Vector3 initialFall; // The player's starting position -- Where Rust wakes up
     [SerializeField] float rustPower; // The strength in which Rust can perform actions
     [SerializeField] float rustSpeed; // How fast Rusts can move
     Rigidbody2D rb;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         initialFall = transform.position;
@@ -16,8 +14,9 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.Space)) // Space key to jump
         {
             Jump();
@@ -29,7 +28,6 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.D))
         {
             rb.AddForce(Vector2.right * rustSpeed);
-        }
     }
 
     void Jump()
@@ -42,9 +40,5 @@ public class Player : MonoBehaviour
         transform.position = initialFall;
         rb.gravityScale = 1;
     }
-
-    void CutSceneTrigger() // When Rust hits a cutscene trigger point
-    {
-
-    }
+}
 }

@@ -1011,7 +1011,7 @@ PrefabInstance:
       addedObject: {fileID: 286057283}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 286057282}
+      addedObject: {fileID: 286057287}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
 --- !u!1 &286057280 stripped
 GameObject:
@@ -1023,20 +1023,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
   m_PrefabInstance: {fileID: 286057279}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &286057282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286057280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bb15e91a4ad1486ea3fde44ad3a472a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  anim: {fileID: 286057286}
-  visuals: {fileID: 2095865734}
 --- !u!50 &286057283
 Rigidbody2D:
   serializedVersion: 5
@@ -1146,6 +1132,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &286057287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286057280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf951fdfbfff478bbf13e684c9938e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RustAnimations
+  visuals: {fileID: 2095865734}
 --- !u!1 &376646376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,7 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8c2af019147447c8b8f8bb73c27864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  changeScene: Scene 1
+  changeScene: Scene 1 (After)
 --- !u!212 &1490448593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1867,7 +1866,7 @@ Transform:
   m_GameObject: {fileID: 1490448590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.958, y: -1.67, z: 0}
+  m_LocalPosition: {x: -5.39, y: -1.67, z: 0}
   m_LocalScale: {x: 0.643498, y: 3.158998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

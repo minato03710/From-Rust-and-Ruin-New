@@ -1,14 +1,15 @@
 using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
-public class RustAnimations : MonoBehaviour
+// This script controls the direction that Rust faces
+// The script that players use to control Rust is "RustController"
+
+public class RustOrientation : MonoBehaviour
 {
     float horizontal;
-    public Animator anim;
     Rigidbody2D rb;
-    public Transform visuals;
+    public Transform visuals; // Visuals is used to flip Rust
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
@@ -23,11 +24,6 @@ public class RustAnimations : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
-
-        if(horizontal != 0)
-        {
-            anim.SetBool("isMoving", true);   // isMoving is set to true when no horizontal movement is occuring
-        }
 
         if (horizontal > 0)
         {

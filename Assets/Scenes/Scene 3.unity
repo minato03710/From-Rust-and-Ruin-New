@@ -323,20 +323,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
   m_PrefabInstance: {fileID: 636792397}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &134515830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134515829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bb15e91a4ad1486ea3fde44ad3a472a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  anim: {fileID: 134515834}
-  visuals: {fileID: 1492059525}
 --- !u!50 &134515831
 Rigidbody2D:
   serializedVersion: 5
@@ -451,6 +437,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
   m_PrefabInstance: {fileID: 636792397}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &134515836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134515829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf951fdfbfff478bbf13e684c9938e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  visuals: {fileID: 1492059525}
 --- !u!1 &409992482
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +463,7 @@ GameObject:
   - component: {fileID: 409992484}
   - component: {fileID: 409992483}
   m_Layer: 0
-  m_Name: ToScene1
+  m_Name: GoBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8c2af019147447c8b8f8bb73c27864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  changeScene: Scene 1
+  changeScene: Scene 1 (After)
 --- !u!212 &409992485
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -774,7 +773,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.24699795, y: 0.05536163}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -784,7 +783,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.86, y: 1.32}
+  m_Size: {x: 1.366004, y: 1.2092769}
   m_EdgeRadius: 0
 --- !u!114 &415557212
 MonoBehaviour:
@@ -1034,7 +1033,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.5558857, y: -0.067941606}
+  m_Offset: {x: 0.09169978, y: -0.01683858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1044,7 +1043,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9117713, y: 1.6358832}
+  m_Size: {x: 0.9833995, y: 1.5336771}
   m_EdgeRadius: 0
 --- !u!114 &551776128
 MonoBehaviour:
@@ -1084,11 +1083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.54
+      value: 3.6683693
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.53
+      value: -1.343983
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1096,7 +1095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9833524
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1108,7 +1107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.1817087
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1120,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 20.939
       objectReference: {fileID: 0}
     - target: {fileID: -7196336903552345828, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1552,7 +1551,7 @@ PrefabInstance:
       addedObject: {fileID: 134515831}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 134515830}
+      addedObject: {fileID: 134515836}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 948033b55e13643369ebcc1bfaf57aa8, type: 3}
 --- !u!1 &745853660
 GameObject:
@@ -1670,9 +1669,9 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.268
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_FalloffIntensity: 0.306
+  m_Color: {r: 1, g: 0.796886, b: 0.3066038, a: 1}
+  m_Intensity: 8
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -1691,8 +1690,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.66569996, y: -2.2365499, z: 0}
-    m_Extent: {x: 3.2247, y: 5.96405, z: 0}
+    m_Center: {x: -0.5260001, y: -2.2131, z: 0}
+    m_Extent: {x: 2.354, y: 5.9406, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1703,8 +1702,8 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 1
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -2.8908896, y: -6.9263024, z: 0}
-  - {x: 1.5593247, y: -7.2033515, z: 0}
+  - {x: -1.8820956, y: -6.9913716, z: 0}
+  - {x: 0.83075106, y: -7.1563573, z: 0}
   - {x: 0.08662356, y: 2.6452255, z: 0}
   - {x: 0.07425251, y: 2.7278047, z: 0}
 --- !u!4 &787585187
@@ -2103,7 +2102,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.608427, y: 0.27991736}
+  - {x: -3.2575152, y: 1.6682447}
   - {x: -2.1109176, y: -0.3090346}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
