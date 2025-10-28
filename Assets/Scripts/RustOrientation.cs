@@ -23,17 +23,17 @@ public class RustOrientation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
+        //horizontal = Input.GetAxis("Horizontal");
 
-        if (horizontal > 0)
+        //if (horizontal > 0)
         {
-            visuals.transform.localEulerAngles = new Vector3(0, 180, 0);
+            //visuals.transform.localEulerAngles = new Vector3(0, 180, 0);
 
         }
 
-        else if (horizontal < 0)
+        //else if (horizontal < 0)
         {
-            visuals.transform.localEulerAngles = new Vector3(0, 0, 0);
+            //visuals.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
 
     }

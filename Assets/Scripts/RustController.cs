@@ -2,43 +2,68 @@ using UnityEngine;
 
 public class RustController : MonoBehaviour
 {
-    Vector3 initialFall; // The player's starting position -- Where Rust wakes up
-    [SerializeField] float rustPower; // The strength in which Rust can perform actions
-    [SerializeField] float rustSpeed; // How fast Rusts can move
+
     Rigidbody2D rb;
+    public float rustPower; // Jump power
+    public float rustSpeed; // Movement speed
+    public string activeAnimation; // Determines which animation will play
+    public int jumpCount; // Sets the number of times that Rust can jump
+    public bool touchingGround; // Checks if Rust is touching the ground
+
 
     void Start()
     {
-        initialFall = transform.position;
         rb = GetComponent<Rigidbody2D>();
+        jumpCount = 2;
     }
 
     // Update is called once per frame
     public void Update()
     {
-
-        if(Input.GetKeyDown(KeyCode.Space)) // Space key to jump
+        // Space key triggers jump
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            if(jumpCount > 0)
+            {
+                Jump();
+            }
         }
-        if(Input.GetKeyDown(KeyCode.A))
+
+        if(Input.GetKey(KeyCode.A))
         {
             rb.AddForce(Vector2.left * rustSpeed);
         }
-        if(Input.GetKeyDown(KeyCode.D))
+
+        if(Input.GetKey(KeyCode.D))
         {
             rb.AddForce(Vector2.right * rustSpeed);
+        }
     }
 
+    // Jump
     void Jump()
     {
+        jumpCount -= 1; // Subtracts number of jumps remaining by 1
         rb.AddForce(Vector2.up * rustPower);
     }
 
-    void StartGame() // Player is told that game has started
+    // Checks if the player has collided with a platform
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        transform.position = initialFall;
-        rb.gravityScale = 1;
+        if(collision.gameObject.CompareTag("Platform"))
+        {
+            jumpCount = 2; // Resets the number of times that the player can jump
+            touchingGround = true;
+        }
     }
-}
+
+    // Checks if the player has left a platform
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Platform"))
+        {
+            touchingGround = false;
+        }
+    }
+
 }
