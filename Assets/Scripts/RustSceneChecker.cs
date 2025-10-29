@@ -38,10 +38,10 @@ public class RustSceneChecker : MonoBehaviour
             if(controlsReference != null){
 
                 // Grabs the rustPower variable from the RustController script
-                controlsReference.rustPower = 200;
+                controlsReference.rustPower = 150;
 
                 // Grabs the rustSpeed variable from the RustController script
-                controlsReference.rustSpeed = 0.5f;
+                controlsReference.rustSpeed = 0.3f;
             }
         }
     }

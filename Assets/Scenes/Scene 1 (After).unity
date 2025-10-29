@@ -1912,6 +1912,8 @@ MonoBehaviour:
   rustPower: 200
   rustSpeed: 80
   activeAnimation: 
+  jumpCount: 0
+  touchingGround: 0
 --- !u!61 &1311057035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2058,6 +2060,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: 67163a532a8574d7ca6360cafcfb7923, type: 3}
       propertyPath: m_Name
       value: scene_1_updated
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 67163a532a8574d7ca6360cafcfb7923, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 67163a532a8574d7ca6360cafcfb7923, type: 3}
       propertyPath: m_LocalPosition.x
