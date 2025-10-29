@@ -6,9 +6,9 @@ public class RustController : MonoBehaviour
     Rigidbody2D rb;
     public float rustPower; // Jump power
     public float rustSpeed; // Movement speed
-    public string activeAnimation; // Determines which animation will play
     public int jumpCount; // Sets the number of times that Rust can jump
     public bool touchingGround; // Checks if Rust is touching the ground
+    public Animator animator;
 
 
     void Start()
@@ -45,6 +45,7 @@ public class RustController : MonoBehaviour
     {
         jumpCount -= 1; // Subtracts number of jumps remaining by 1
         rb.AddForce(Vector2.up * rustPower);
+        animator.SetBool("onGround", false);
     }
 
     // Checks if the player has collided with a platform
@@ -54,6 +55,7 @@ public class RustController : MonoBehaviour
         {
             jumpCount = 2; // Resets the number of times that the player can jump
             touchingGround = true;
+            animator.SetBool("onGround", true);
         }
     }
 

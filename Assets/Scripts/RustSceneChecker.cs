@@ -21,10 +21,10 @@ public class RustSceneChecker : MonoBehaviour
             if(controlsReference != null){
 
                 // Grabs the rustPower variable from the RustController script
-                controlsReference.rustPower = 100;
+                controlsReference.rustPower = 60;
 
                 // Grabs the rustSpeed variable from the RustController script
-                controlsReference.rustSpeed = 0.25f;
+                controlsReference.rustSpeed = 0.3f;
 
                 // Sets Rust's walk animation for this scene to WaryWalk
                 // Placeholder
@@ -38,7 +38,7 @@ public class RustSceneChecker : MonoBehaviour
             if(controlsReference != null){
 
                 // Grabs the rustPower variable from the RustController script
-                controlsReference.rustPower = 150;
+                controlsReference.rustPower = 180;
 
                 // Grabs the rustSpeed variable from the RustController script
                 controlsReference.rustSpeed = 0.3f;
