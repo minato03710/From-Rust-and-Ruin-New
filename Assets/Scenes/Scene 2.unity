@@ -918,8 +918,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ???
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0a8fe57694b7145e3bc855e43b8dd46d, type: 2}
+  m_sharedMaterial: {fileID: -8909952745641337147, guid: 0a8fe57694b7145e3bc855e43b8dd46d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3988,7 +3988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.20996, y: -447.25995}
+  m_AnchoredPosition: {x: -29.2099, y: -447.25995}
   m_SizeDelta: {x: 179.46, y: -698.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484240418
@@ -5315,8 +5315,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: That sound...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0a8fe57694b7145e3bc855e43b8dd46d, type: 2}
+  m_sharedMaterial: {fileID: -8909952745641337147, guid: 0a8fe57694b7145e3bc855e43b8dd46d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
