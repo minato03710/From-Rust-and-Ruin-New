@@ -2,11 +2,7 @@ using UnityEngine;
 
 public class CameraTop : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private BoxCollider2D boxCollider;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +13,8 @@ public class CameraTop : MonoBehaviour
     {
         GameObject searchCamera = GameObject.Find("Main Camera"); // Finds the Main Camera
         searchCamera.GetComponent<Animator>().Play("CameraTop");
+        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider.enabled = false;
     }
 
 }

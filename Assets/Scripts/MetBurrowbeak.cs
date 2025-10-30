@@ -5,11 +5,14 @@ public class MetBurrowbeak : MonoBehaviour
 
     Animator visualsAnimator;
     Animator cameraAnimator;
+    [SerializeField] GameObject searchCanvas;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
         MoveCamera();
         RustResponse();
+        ShowCanvas();
+
     }
 
     public void RustResponse() // Rust responds to Burrowbeak in the cutscene
@@ -27,4 +30,10 @@ public class MetBurrowbeak : MonoBehaviour
         cameraAnimator = searchCamera.GetComponent<Animator>();
         cameraAnimator.Play("CameraBurrowbeak");
     }
+
+    public void ShowCanvas()
+    {
+        searchCanvas.SetActive(true);
+    }
+
 }
