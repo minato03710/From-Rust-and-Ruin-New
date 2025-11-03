@@ -6,15 +6,15 @@ public class RustController : MonoBehaviour
     Rigidbody2D rb;
     public float rustPower; // Jump power
     public float rustSpeed; // Movement speed
-    public int jumpCount; // Sets the number of times that Rust can jump
-    public bool touchingGround; // Checks if Rust is touching the ground
+    public int jumpCount; // Max jumps before landing
+    public bool touchingGround; // Checks if touching ground
     public Animator animator;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        jumpCount = 2;
+        jumpCount = 2; // Can jump twice before landing
     }
 
     // Update is called once per frame
@@ -23,17 +23,19 @@ public class RustController : MonoBehaviour
         // Space key triggers jump
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            if(jumpCount > 0)
+            if(jumpCount > 0) // Checks if there are jumps left
             {
                 Jump();
             }
         }
 
+        // Pressing A moves Rust to the left
         if(Input.GetKey(KeyCode.A))
         {
             rb.AddForce(Vector2.left * rustSpeed);
         }
 
+        // Pressing D moves Rust to the right
         if(Input.GetKey(KeyCode.D))
         {
             rb.AddForce(Vector2.right * rustSpeed);
@@ -53,7 +55,7 @@ public class RustController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Platform"))
         {
-            jumpCount = 2; // Resets the number of times that the player can jump
+            jumpCount = 2; // Resets the number of jumps remaining
             touchingGround = true;
             animator.SetBool("onGround", true);
         }

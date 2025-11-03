@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 // This script controls visual aspects of Rust such as their animation and orientation
 
